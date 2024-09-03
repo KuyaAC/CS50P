@@ -30,3 +30,35 @@ def main():
     print(x)
 
 main()
+
+#Einstein E=mc2
+def main():
+    x = input("m: ")
+    x = int(x)
+    c = 300000000
+    c = c**2
+    e = x * c
+    print("E:", e)
+
+main()
+
+#Tip Calculator
+def main():
+    dollars = dollars_to_float(input("How much was the meal? "))
+    percent = percent_to_float(input("What percentage would you like to tip? "))
+    tip = dollars * percent
+    print(f"Leave ${tip:.2f}")
+
+
+def dollars_to_float(d):
+    # TODO
+    amount = float(d.replace('$', ''))
+    return amount
+
+def percent_to_float(p):
+    # TODO
+    percent = float(p.replace('%', ''))
+    return percent/100
+
+
+main()
