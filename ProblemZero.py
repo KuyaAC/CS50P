@@ -12,3 +12,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#All CAPS to normal size text
+def main():
+    x = input("")
+    print(lowerCase(x))
+
+def lowerCase(str):
+    return str.lower()
+
+main()
+
+#Change spaces to "..."
+def main():
+    x = input("").replace(" ", "...")
+    print(x)
+
+main()
