@@ -71,3 +71,7 @@ def is_even(n):
     return n % 2 == 0
 
 main()
+
+
+#match similar in swtich in other language
+name = input("What is your name")
