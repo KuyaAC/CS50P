@@ -75,3 +75,11 @@ main()
 
 #match similar in swtich in other language
 name = input("What is your name")
+
+match name:
+    case "Harry" | "Hermione" | "Ron":
+        print("Harry Poter")
+    case "Goku":
+        print("DBZ")
+    case _:
+        print("WHo ?")
