@@ -73,7 +73,7 @@ def is_even(n):
 main()
 
 
-#match similar in swtich in other language
+#Match similar in swtich in other language
 name = input("What is your name")
 
 match name:
