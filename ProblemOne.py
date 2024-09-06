@@ -66,7 +66,7 @@ else:
 #Eating Time conditional
 def main():
     timer = input("What time is it? ")
-    NewTime = convert(timer)
+    NewTime = convert(timer) #def og the new function Acces the variable time
     if NewTime >= 6 and NewTime <= 9:
         print("breakfast time")
     elif NewTime >= 11 and NewTime <= 13:
@@ -77,7 +77,7 @@ def main():
         return
 
 
-def convert(time):
+def convert(time):  #def of new function using variable in the main function
     Stime = time.split(":")
     hr = int(Stime[0])
     min = float(Stime[1])
