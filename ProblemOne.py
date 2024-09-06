@@ -19,3 +19,48 @@ elif greet[0] == "h":
 
 else:
     print("$100")
+
+#Check selected file type
+type = input("File Type: ").lower()
+file = type.rsplit('.', 1)[-1]
+file = file.strip()
+
+match file:
+    case "gif" | "png":
+        print("image/" + file)
+    case "jpeg" | "jpg":
+        print("image/jpeg")
+    case "txt":
+        print("text/plain")
+    case "pdf" | "zip":
+        print("application/" + file)
+    case _:
+        print("application/octet-stream")
+
+#level up expression using conditions
+expression = input("Expression: ")
+value = expression.split()
+x = float(value[0])
+y = value[1]
+z = float(value[2])
+
+if y == '/':
+    div = f"{x} {y} {z}"
+    result = eval(div)
+    print(result)
+
+elif y == '*':
+    mul = f"{x} {y} {z}"
+    result = eval(mul)
+    print(result)
+
+elif y == '+':
+    add = f"{x} {y} {z}"
+    result = eval(add)
+    print(result)
+else:
+    sub = f"{x} {y} {z}"
+    result = eval(sub)
+    print(result)
+
+#Eating Time conditional
