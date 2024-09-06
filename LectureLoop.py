@@ -58,3 +58,78 @@ students = ["ac", "allen", "carl"]
 
 for student in students:
     print(student)
+
+#other way of for loop using LEN and RANGE
+students = ["ac", "allen", "carl"]
+
+for i in range(len(students)):
+    print(i + 1, students[i])
+
+#using DICT in a loop
+students = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+
+for student in students:
+    print(student, students[student], sep=", ")
+
+#bigger usage of dict
+
+students = [
+    {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
+    {"name": "Draco", "house": "Slytherin", "patronus": None}, #None if there no value to the key
+]
+
+for student in students:
+    print(student["name"], student["house"], student["patronus"], sep=", ")
+
+#mario
+def main():
+    print_column(3)
+
+def print_column(height):
+    for i in range(height):
+        print("#")
+
+    #OR You can use this:
+    print("#\n" * height, end="")
+
+#print 3x3 square
+def main():
+    print_square(3)
+
+def print_square(size):
+
+    #for each row in square
+    for i in range(size):
+        #for each brick in row
+        for j in range(size):
+            #print brick
+            print("#", end="")
+        #for new line
+        print()
+main()
+
+# or to make it short
+def print_square(size):
+    for i in range(size):
+        print("#" * size)
+main()
+
+#for More details obstraction
+def main():
+    print_square(3)
+
+def print_square(size):
+    for _ in range(size):
+        print_row(size)
+
+def print_row(width):
+    print("#" * width)
+
+main()
