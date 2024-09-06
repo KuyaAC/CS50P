@@ -64,3 +64,26 @@ else:
     print(result)
 
 #Eating Time conditional
+def main():
+    timer = input("What time is it? ")
+    NewTime = convert(timer)
+    if NewTime >= 6 and NewTime <= 9:
+        print("breakfast time")
+    elif NewTime >= 11 and NewTime <= 13:
+        print("lunch time")
+    elif NewTime >= 17 and NewTime <= 21:
+        print("dinner time")
+    else:
+        return
+
+
+def convert(time):
+    Stime = time.split(":")
+    hr = int(Stime[0])
+    min = float(Stime[1])
+    NewMin = min / 60
+    return hr + NewMin
+
+
+if __name__ == "__main__":
+    main()
