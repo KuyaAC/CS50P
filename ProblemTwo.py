@@ -11,7 +11,7 @@ for char in name:
 
 print()
 
-# AI:
+# AI: (practice doing this kinda code )
 def camel_to_snake(name):
  # Initialize an empty result string
     snake_case = ""
