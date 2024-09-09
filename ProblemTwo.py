@@ -82,3 +82,34 @@ print("snake_case:", camel_to_snake(name))
                 break
 
     coke_exchange()
+
+
+#Vowel Remover:
+    def v_remover(input_str):
+        vowels = 'aeiouAEIOU'
+
+        printer = ""
+
+        for char in input_str:
+            if char in vowels:
+                printer += ""
+            else:
+                printer += char
+
+        return printer
+
+    input_string = input("Input: ")
+    print(f"Output: {v_remover(input_string)}")
+
+#AI:
+    def remove_vowels(text):
+        vowels = 'aeiouAEIOU'
+        return ''.join(char for char in text if char not in vowels)
+
+    def main():
+        user_input = input("Input: ")
+        result = remove_vowels(user_input)
+        print(f"Output: {result}")
+
+    if __name__ == "__main__":
+        main()
