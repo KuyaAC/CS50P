@@ -39,3 +39,12 @@ if __name__ == '__main__':
 
         print(f"{a // b}")
         print(f"{a / b}")
+
+
+# The list of non-negative integers that are less than n =3 is [0, 1, 2] . Print the square of each number on a separate line.
+#ANSWER:
+    if __name__ == '__main__':
+        n = int(input())
+        for i in range(n):
+            i = i**2
+            print(i)
