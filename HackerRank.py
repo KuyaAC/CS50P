@@ -48,3 +48,11 @@ if __name__ == '__main__':
         for i in range(n):
             i = i**2
             print(i)
+
+# The included code stub will read an integer, , from STDIN.
+# Without using any string methods, try to print the following: 123......n
+#ANSWER:
+    if __name__ == '__main__':
+        n = int(input())
+        for i in range(n):
+            print(i+1, end="")
