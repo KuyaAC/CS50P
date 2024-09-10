@@ -29,3 +29,13 @@ if __name__ == '__main__':
     print(f"{a + b}")
     print(f"{a - b}")
     print(f"{a * b}")
+
+# The result of the integer division .
+# The result of the float division is .
+#ANSWER:
+    if __name__ == '__main__':
+        a = int(input())
+        b = int(input())
+
+        print(f"{a // b}")
+        print(f"{a / b}")
