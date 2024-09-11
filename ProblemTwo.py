@@ -113,3 +113,41 @@ print("snake_case:", camel_to_snake(name))
 
     if __name__ == "__main__":
         main()
+
+
+#CHECK PLATES: CS50 valid/CS04 invalid...
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+
+
+def is_valid(s):
+    # Check length (2-6 characters)
+    if len(s) < 2 or len(s) > 6:
+        return False
+
+    # Check if it starts with at least two letters
+    if not s[:2].isalpha():
+        return False
+
+    # Check for invalid characters (only letters and numbers allowed)
+    if not s.isalnum():
+        return False
+
+    # Check number placement
+    found_number = False
+    for char in s:
+        if char.isdigit():
+            if not found_number and char == '0':
+                return False  # First number can't be '0'
+            found_number = True
+        elif found_number and char.isalpha():
+            return False  # No letters after numbers
+
+    return True
+
+
+main()
