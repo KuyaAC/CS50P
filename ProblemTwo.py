@@ -175,23 +175,19 @@ fruits_calories = [
     {"fruit": "Tangerine", "calories": 50},
     {"fruit": "Watermelon", "calories": 80}
 ]
-
-def get_fruit_calories(fruit_name):
+def get_fruit_calories(fruit_name): #get fruits from dict usign for loop
     for fruit in fruits_calories:
         if fruit["fruit"].lower() == fruit_name.lower():
-            return fruit["calories"]
+            return fruit["calories"] #get the calories of chosen fruit
     return None
 
-while True:
-    user_input = input("Enter a fruit name (or 'quit' to exit): ").strip()
-
-    if user_input.lower() == 'quit':
-        print("Thank you for using the fruit calorie lookup. Goodbye!")
-        break
+while True: #output the fruit calorie if the input is correct
+    user_input = input("Item: ").strip()
 
     calories = get_fruit_calories(user_input)
 
     if calories is not None:
-        print(f"The calorie count for {user_input} is: {calories}")
+        print(f"Calories: {calories}")
+        break
     else:
-        print(f"Sorry, we don't have information for {user_input}")
+        break
