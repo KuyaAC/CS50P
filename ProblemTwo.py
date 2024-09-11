@@ -116,7 +116,7 @@ print("snake_case:", camel_to_snake(name))
 
 
 #CHECK PLATES: CS50 valid/CS04 invalid...
-def main():
+def main(): #def main to check if valid or not
     plate = input("Plate: ")
     if is_valid(plate):
         print("Valid")
@@ -130,21 +130,21 @@ def is_valid(s):
         return False
 
     # Check if it starts with at least two letters
-    if not s[:2].isalpha():
+    if not s[:2].isalpha(): #.isalpha to check if 2 char in (s) is string in alphabet
         return False
 
     # Check for invalid characters (only letters and numbers allowed)
-    if not s.isalnum():
+    if not s.isalnum(): #check if in string is alpha numeric
         return False
 
     # Check number placement
-    found_number = False
+    found_number = False #Initializes a flag to track if a number has been found.
     for char in s:
-        if char.isdigit():
-            if not found_number and char == '0':
+        if char.isdigit(): #Checks if the current character is a digit.
+            if not found_number and char == '0': #If it’s the first digit and is '0', return False (leading zeros are not allowed).
                 return False  # First number can't be '0'
             found_number = True
-        elif found_number and char.isalpha():
+        elif found_number and char.isalpha(): #If a letter is found after a number, return False (letters can’t appear after numbers).
             return False  # No letters after numbers
 
     return True
