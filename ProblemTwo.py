@@ -151,3 +151,47 @@ def is_valid(s):
 
 
 main()
+
+#Fruits with corresponding calories
+fruits_calories = [
+    {"fruit": "Apple", "calories": 130},
+    {"fruit": "Avocado", "calories": 50},
+    {"fruit": "Banana", "calories": 110},
+    {"fruit": "Cantaloupe", "calories": 50},
+    {"fruit": "Grapefruit", "calories": 60},
+    {"fruit": "Grapes", "calories": 90},
+    {"fruit": "Honeydew Melon", "calories": 50},
+    {"fruit": "Kiwifruit", "calories": 90},
+    {"fruit": "Lemon", "calories": 15},
+    {"fruit": "Lime", "calories": 20},
+    {"fruit": "Nectarine", "calories": 60},
+    {"fruit": "Orange", "calories": 80},
+    {"fruit": "Peach", "calories": 60},
+    {"fruit": "Pear", "calories": 100},
+    {"fruit": "Pineapple", "calories": 50},
+    {"fruit": "Plums", "calories": 70},
+    {"fruit": "Strawberries", "calories": 50},
+    {"fruit": "Sweet Cherries", "calories": 100},
+    {"fruit": "Tangerine", "calories": 50},
+    {"fruit": "Watermelon", "calories": 80}
+]
+
+def get_fruit_calories(fruit_name):
+    for fruit in fruits_calories:
+        if fruit["fruit"].lower() == fruit_name.lower():
+            return fruit["calories"]
+    return None
+
+while True:
+    user_input = input("Enter a fruit name (or 'quit' to exit): ").strip()
+
+    if user_input.lower() == 'quit':
+        print("Thank you for using the fruit calorie lookup. Goodbye!")
+        break
+
+    calories = get_fruit_calories(user_input)
+
+    if calories is not None:
+        print(f"The calorie count for {user_input} is: {calories}")
+    else:
+        print(f"Sorry, we don't have information for {user_input}")
