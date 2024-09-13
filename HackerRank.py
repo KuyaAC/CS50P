@@ -56,3 +56,16 @@ if __name__ == '__main__':
         n = int(input())
         for i in range(n):
             print(i+1, end="")
+
+#print the second runner up of the inputs
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    score = list(set(arr))
+
+    score.sort(reverse=True)
+
+    runner_up= score[1]
+
+    print(runner_up)
