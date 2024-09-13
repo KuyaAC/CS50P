@@ -60,12 +60,15 @@ if __name__ == '__main__':
 #print the second runner up of the inputs
 if __name__ == '__main__':
     n = int(input())
-    arr = map(int, input().split())
+    arr = map(int, input().split()) #list of scores
 
+    #Remove duplicates by converting the list to a set
     score = list(set(arr))
 
+    #Sort the scores in descending order
     score.sort(reverse=True)
 
+    #pick the second highest in the list
     runner_up= score[1]
 
     print(runner_up)
